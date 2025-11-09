@@ -8,6 +8,8 @@ import time
 import threading
 from dnslib import DNSRecord, DNSHeader, RR, QTYPE, A, AAAA
 import sys
+import socket
+
 
 # HTTP Server Handler
 class SimpleHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
@@ -113,6 +115,10 @@ def shutdown_servers(signum, frame):
 if __name__ == "__main__":
     try:
         config = load_config()
+        hostname = socket.gethostname()
+        ip_address = socket.gethostbyname(hostname)
+        config['server_address'], config['dns_records'][0]['address'] = (ip_address, ip_address)
+        print(f"Set the DNS on your TV to: {ip_address}")
         signal.signal(signal.SIGINT, shutdown_servers)
 
         if config.get("enable_https_server", True):

@@ -23,6 +23,11 @@
             "hostname": "www.stremio.com",
             "type": "A",
             "address": "104.16.204.97"
+        },
+        {
+            "hostname": "wn7lso8ghdka.stremio.com",
+            "type": "A",
+            "address": "104.16.204.97"
         }
     ]
 }
