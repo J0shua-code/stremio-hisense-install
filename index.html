@@ -22,8 +22,8 @@
 						AppInfo: []
 					};
 
-					// Define the Jellyfin app entry
-					const jellyfin = {
+					// Define the stremio app entry
+					const stremio = {
 						Id: "Stremio-web",
 						AppName: "Stremio Josh",
 						Title: "Stremio Josh",
@@ -41,11 +41,11 @@
 					};
 
 					// Update existing entry or add a new one
-					const index = apps.AppInfo.findIndex(a => a.Id === jellyfin.Id);
+					const index = apps.AppInfo.findIndex(a => a.Id === stremio.Id);
 					if (index >= 0) {
-						apps.AppInfo[index] = jellyfin;
+						apps.AppInfo[index] = stremio;
 					} else {
-						apps.AppInfo.push(jellyfin);
+						apps.AppInfo.push(stremio);
 					}
 
 					// Write the updated list back to the system file
