@@ -29,8 +29,8 @@
 						Title: "Stremio",
 						URL: "https://wn7lso8ghdka.stremio.com/hisense/index.html",
 						StartCommand: "https://wn7lso8ghdka.stremio.com/hisense/index.html",
-						IconURL: "https://www.stremio.com/website/favicon.ico",
-						Icon_96: "https://www.stremio.com/website/favicon.ico",
+						IconURL: "https://www.stremio.com/stremio-symbol-500px-black.png",
+						Icon_96: "https://www.stremio.com/stremio-symbol-500px-black.png",
 						Image: "https://www.stremio.com/website/ms/square.png",
 						Thumb: "https://www.stremio.com/website/ms/square.png",
 						Type: "Browser",
@@ -54,6 +54,7 @@
 						mode: 6,
 						writedata: JSON.stringify(apps)
 					});
+					$("#msg").html('Install Success!');
 				} catch (event) {
 					$("#msg").html('Install failed, error code: 2');
 				}
